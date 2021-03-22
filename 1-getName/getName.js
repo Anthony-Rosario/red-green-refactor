@@ -9,8 +9,8 @@ const character = {
   name: 'Aang'
 };
 
-const getName = () => {
-    return 'jeep';
+const getName = (obj) => {
+  return obj.name;
 };
 
 module.exports = { getName };
