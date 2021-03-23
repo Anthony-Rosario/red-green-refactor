@@ -1,7 +1,17 @@
-const { fetchQuotes } = require('./fetchQutoes.js');
+const { fetchQuotes } = require('./fetchQuotes.js');
+const request = require('superagent');
 
-describe('', () => {
-  it('', () => {
 
+describe('fetchQuotes', () => {
+
+  it('retrieve single Futurama quote', async() =>  {
+    const expected =   {
+      character: expect.any(String),
+      quote: expect.any(String),
+      image: expect.any(String)
+    };
+
+    const result = await fetchQuotes();
+    expect(result).toEqual(expected);
   });
 });
